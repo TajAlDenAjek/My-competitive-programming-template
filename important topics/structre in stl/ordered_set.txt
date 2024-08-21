@@ -1,0 +1,30 @@
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+template<typename T>
+using ordered_set=tree <T,null_type,less<T>,rb_tree_tag,tree_order_statistics_node_update>;
+
+
+ordered_set s;
+
+
+s.insert(1);
+s.insert(0);
+s.insert(3);
+
+cout << *(s.find_by_order(1)) << endl;
+
+cout << s.order_of_key(4) << endl;
+
+
+s.find(key)!=s.end()
+s.erase(s.find(key));
+
+
+
+binary search with it 
+
+with pairs 
+
+lower get the upper 
+and upper get the lower 

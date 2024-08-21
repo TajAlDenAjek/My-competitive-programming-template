@@ -1,0 +1,64 @@
+1. graph repersentation 
+	useful trick if we need to make multiple dfs in a graph no need to go and memset visited array 	
+	each time with O(v) this is bad .. we will make visited_token variable =1 every time we need to 
+	make new dfs we just increament it by 1 and if dfs if(visited[v]!=visited_token) ,,efficent ;)
+2. dfs O(V+E)
+
+3. bfs O(V+E)
+
+4. topolgical sort O(V+E) 
+
+5. DAG shortest path && longest path (after top sort) O(N)
+
+6. Dijkstra shortest path single source shortest path algorithm no negative value (calculate the shortest path from one node to any another node in the graph).  O((E+V)*log(v)) (lazy implemenation with pq)
+-> dijkstra is not very good in the dense graph (alot of edges cost in two dir && key decrease) so we use indexed priority queue && D_ary Heap 
+best D is = (E/v) to the heap to make real difference
+
+7. Bellman-Ford shortest path single source shortest path from one node to any other node (negative cost in the edges ),O(E*V)
+
+8.Floyd warshall all 
+pairs shortest path algorithm  computing in O(v^2)
+good for 2d grids with small sizes and detecting negative cycles 
+
+9. Bridges and Articulation points in a graph
+we can find it with a simple dfs -> O(e+v)
+look to some source code on internet how to find them 
+
+10. Tarjan's Algorithm for finding strongly connected components  in directed graphs depending on low link and stack using dfs with time complexity of O(V+E)
+
+11. Traveling sales man problem NP-complete problem 
+(find the Hamiltonian cycle) :(path that visits every node once with minium cost and return to the source node) ..time complexity bruteforceing is O(n!) && using dp it will be O(n^2*2^n) while space complexity is O(n*2^n) in the memo table for dp we have two state the visited nodes we can represent it with a mask (number and look for the zero,one bit) && the last node we have visited 
+
+12 Eulerian path && Eulerian Circuit in both directed && undirected graphs (in short there is a rules we have to follow it to detected whether we have them or not once we can find them time complexity is no more than O(E) with simple dfs ) .
+
+13.DSU (disjoint set union) is a data sturctre 
+the idea is to represent the graph as a groups each group has a root node for it in the begining every node is root node for it self then we can do two operations ( find root && union two gropus )very useful algorithm needed in advanced algorithms.time complexity O(n);
+
+14. Minimum spanning tree : find a tree(special graph that connecet all the graph with no cycle and n-1 edges) the graphs must be one connected component 
+with minimum cost . // there could be valid differenet spanning trees for the same graph
+ - prim's lazy time complexity O(E+log(E)) using priorty queue 
+ - prim's eger version time complexity O(E+log(v)) using indexed priorty queue  
+ - Kruskal's using the dsu algorithm we will sort all edges then start union them while they don't 	belong to the same group
+ - Boruvka's
+
+15. Bipartite graph (graph matching problems ) representing the graph as two gropus of nodes (odd cycles between them) (two colors red and blue) needed algorithm is (Hopcraft_karp) search it and learn.
+
+16. Network flow problems : (finding maximum_flow in a graph) 
+problems : rats&&OWls - elementary math - matching - networking 
+the flow in example it's the data you can push it through your network 
+flow graph is like source then bipartite graph then sink node and every edgy has a capacity of flow and
+resedusial edge if we want to not make the next move very exiting topic .
+
+-- Max flow algorithms
+	-Ford_Fulkerson method O(F*E)
+	 using dfs it's very bad if the flow of edges is more than one then there could be a bottle 		 neck of 1 and make the algorithm runtime the worst ever 
+	-EDmond Karp O(E^2*v)
+	 using bfs it's more effecient since we are not depedning on the flow value 
+	-capacity scaling O(E^2*Log(U)) where U is the maximum power of two less than the max 	 	         capacit y value it will be changed  (larger paths first)
+
+	- Dinic's Algorithm O(V^2*E) as a competitive porgrammers this is ours standard one 
+	  it use bfs & dfs (first we will build level graph with bfs then we will iterate overall 	 	  possible paths in dfs and calculate the sum of bottleecks).
+	- Push Relabel O(V^2*sqrt(E)) it uses preflow cocept go google it .
+
+17. head to trees
+

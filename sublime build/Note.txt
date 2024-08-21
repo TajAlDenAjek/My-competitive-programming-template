@@ -1,0 +1,2 @@
+Note : 
+Don't forget to precompile c++ headers in powershell for faster complining time

@@ -1,0 +1,29 @@
+/*  link to source code (github.com/williamfiset/algorithms)
+/* Bellman ford    
+	Single source shortest path  SSSP
+	from one node to any other node with negative values in the graph 
+	time complexity O(E*V)
+	
+*/
+
+/*
+ 1_ set every entery in dist array to +OO
+ 2_ set dist[startPoint]=0;
+ 3_ relax each edge v-1 times 
+ 
+ 
+ for(i=0;i<v-1;i++)
+ {
+	 for(edge in graph.edges):
+		// relax edge (udpate dist with shortest path )
+		if(dist[edge.from]+edge.cost<dist[edge.to])
+			dist[edge.to]=dist[edge.from]+edge.cost;
+ }
+ 
+ // repeat to find nodes caught in a negative cycle
+ for(i=0;i<v-1;i++)
+	 for(edge in graph.edges:)
+		 if(dist[edge.from]+edge.cost<dist[edge.to])
+			 dist[edge.to]=-OO;
+		 
+*/

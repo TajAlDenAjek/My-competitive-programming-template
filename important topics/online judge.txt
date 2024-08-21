@@ -1,0 +1,8 @@
+online judge
+
+    
+    #ifndef ONLINE_JUDGE
+        freopen("cheeseburger_corollary_1_validation_input.txt", "r" , stdin);
+        freopen("MetaHackerCup_2023.txt", "w", stdout);
+    #endif
+        cout << "Case #" << test << ": "; 

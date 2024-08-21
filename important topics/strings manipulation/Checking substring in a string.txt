@@ -1,0 +1,14 @@
+string first=("hello");
+string second=("h");
+
+
+if(first.find(second)!=string::npos))
+	cout << "Found" << endl;
+
+
+What is the value of string :: NPOS in C++?
+-1
+What is string::npos in C++? npos is a constant static member value
+with the greatest possible value for an element of type size_t. This value,
+when used as the value for a len parameter in string's member functions,
+means until the end of the string. This constant is defined with a value of -1.
